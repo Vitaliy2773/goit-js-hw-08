@@ -16,4 +16,4 @@ localStorage.setItem(LOCAL_KEY, JSON.stringify(data.seconds));
 };
 
 player.on('timeupdate',throttle(onPlay, 1000)); 
-player.setCurrentTime(localStorage.getItem(LOCAL_KEY));
+player.setCurrentTime(localStorage.getItem(LOCAL_KEY) || 0);
